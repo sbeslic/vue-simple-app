@@ -1,2 +1,2 @@
 # vue-simple-app
-Test
+Simple Vue App with Vue router and Webpack 4
