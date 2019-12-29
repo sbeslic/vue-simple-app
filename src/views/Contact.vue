@@ -12,8 +12,8 @@
       <b-container>
         <b-row>
           <b-col>
-            <b-form @submit.stop.prevent="onSubmit">
 
+            <b-form @submit.stop.prevent="onSubmit">
               <b-form-group id="example-input-group-1" label="Email address:" label-for="example-input-1">
                 <b-form-input id="example-input-1" name="example-input-1" v-model="$v.form.email.$model" type="email"
                   :state="$v.form.email.$dirty ? !$v.form.email.$error : null" placeholder="Enter email"
@@ -36,7 +36,12 @@
               </b-form-group>
 
               <b-button block type="submit" variant="primary" :disabled="$v.form.$invalid">Submit</b-button>
+
+              <p class="my-5" v-if="submitStatus === 'OK'">Thanks for your submission!</p>
+              <p class="my-5" v-if="submitStatus === 'ERROR'">Please fill the form correctly.</p>
+              <p class="my-5" v-if="submitStatus === 'PENDING'">Sending...</p>
             </b-form>
+
           </b-col>
         </b-row>
       </b-container>
@@ -48,6 +53,8 @@
   import { validationMixin } from 'vuelidate';
   import { required, minLength, email } from 'vuelidate/lib/validators';
 
+  const API_URL = "http://localhost:4000/contact";
+
   export default {
     name: "Contact",
     mixins: [validationMixin],
@@ -57,6 +64,15 @@
         form: {
           email: null,
           text: null
+        },
+        submitStatus: null,
+        error: "",
+        messages: [],
+        message: {
+        username: "Enter a screen name",
+        subject: "",
+        message: "",
+        imageURL: ""
         }
       }
     },
@@ -74,14 +90,16 @@
     },
     methods: {
       onSubmit() {
-        this.$v.form.$touch()
-        if (this.$v.form.$anyError) {
-          return;
+        this.$v.$touch()
+        if (this.$v.$invalid) {
+          this.submitStatus = 'ERROR'
+        } else {
+          this.submitStatus = 'PENDING'
+          setTimeout(() => {
+            this.submitStatus = 'OK'
+          }, 500);
         }
-
-        // Form submit logic
-        alert("Mail has been sent");
-      }
+      },
     }
   };
 </script>
