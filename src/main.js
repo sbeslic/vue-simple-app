@@ -7,10 +7,11 @@ import App from './App';
 import routes from './routes';
 
 import BootstrapVue from 'bootstrap-vue';
-
+import Vuelidate from 'vuelidate';
 
 Vue.use(VueRouter);
 Vue.use(BootstrapVue);
+Vue.use(Vuelidate)
 
 const router = new VueRouter({
     routes,
