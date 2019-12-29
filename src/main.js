@@ -6,7 +6,11 @@ import VueRouter from 'vue-router';
 import App from './App';
 import routes from './routes';
 
+import BootstrapVue from 'bootstrap-vue';
+
+
 Vue.use(VueRouter);
+Vue.use(BootstrapVue);
 
 const router = new VueRouter({
     routes,

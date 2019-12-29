@@ -1,7 +1,8 @@
 import Home from '@/views/Home';
 const Contact = () => import('@/views/Contact');
 
-const routes = [{
+const routes = [
+  {
     path: '/',
     name: 'Home',
     component: Home
