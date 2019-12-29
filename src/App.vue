@@ -1,5 +1,7 @@
 <template>
   <div class="app-main-container">
+
+    <!-- Navbar -->
     <b-navbar toggleable="lg" type="dark" variant="dark" class="fixed-top">
       <b-link to="/" class="navbar-brand">Vue Simple App</b-link>
 
@@ -13,6 +15,7 @@
       </b-collapse>
     </b-navbar>
 
+    <!-- Router view -->
     <router-view />
   </div>
 </template>
@@ -21,10 +24,6 @@
   .app-main-container {
     font-size: 1rem;
     padding-top: 3.625rem;
-
-    h1 {
-      margin: 2rem 0;
-    }
 
     .navbar-dark .navbar-nav a.nav-link {
       color: gray;
