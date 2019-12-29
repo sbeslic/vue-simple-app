@@ -1,13 +1,11 @@
 <template>
-  <div> {{ test }} </div>
-</template>
+  <div>
+    <router-link to="/">
+      Home
+    </router-link> | <router-link to="/contact">
+      Contact
+    </router-link>
 
-<script>
-export default {
-  data() {
-    return ({
-      test: 'IT WORKS'
-    });
-  }
-}
-</script>
+    <router-view />
+  </div>
+</template>
