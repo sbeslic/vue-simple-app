@@ -35,7 +35,7 @@
                 </b-form-invalid-feedback>
               </b-form-group>
 
-              <b-button type="submit" variant="primary" :disabled="$v.form.$invalid">Submit</b-button>
+              <b-button block type="submit" variant="primary" :disabled="$v.form.$invalid">Submit</b-button>
             </b-form>
           </b-col>
         </b-row>

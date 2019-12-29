@@ -45,11 +45,11 @@
     data() {
       return ({
         title: "Moje zvijeri",
-        cickoLink: "https://bit.ly/2Q4p0rm",
+        cickoLink: "https://i.imgur.com/FgGKmyq.jpg",
         catName: "Cicko",
         catExtendedInfo: "(formerly known as Roro)",
         catDescription: "Udomljen iz udruge ali ulicar u dusi. Kradljivac lignji i komadica tune iz manistre. Trgnu ga momenti ludila pa se rastrcava po stanu. Muholovac. Ne zna mjaukat, samo cvrkuce kada se ide jest - pogotovo piletina.",
-        luaLink: "https://bit.ly/2u040JB",
+        luaLink: "https://i.imgur.com/zdk4MqT.jpg",
         dogName: "Lua",
         dogExtendedInfo: "(full name Buba Lua)",
         dogDescription: "Springer spanijel sa jako visokim intenzitetom molecivosti ociju. Jedine dodirne tocke sa lovcem ima dok trazi proizvode od tijesta po ulici. Opsesivni cuvar svih loptica ovog svijeta. Jedna jedina - Lulushka.",
