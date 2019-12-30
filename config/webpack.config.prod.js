@@ -9,7 +9,7 @@ const CompressionPlugin        = require('compression-webpack-plugin');
 const helpers                  = require('./helpers');
 const commonConfig             = require('./webpack.config.common');
 const isProd                   = process.env.NODE_ENV === 'production';
-const environment              = reequire('./env/prod.env');
+const environment              = require('./env/prod.env');
 
 const webpackConfig = merge(commonConfig, {
     mode: 'production',
