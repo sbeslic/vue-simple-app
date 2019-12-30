@@ -15,7 +15,7 @@ const webpackConfig = merge(commonConfig, {
     mode: 'production',
     output: {
         path: helpers.root('dist'),
-        publicPath: '/',
+        publicPath: '/vue-simple-app/',
         filename: 'js/[hash].js',
         chunkFilename: 'js/[id].[hash].chunk.js'
     },
